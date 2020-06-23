@@ -1,0 +1,43 @@
+header{
+    padding: 0.5em;
+   
+    background: url(/img/fon2.jpg) no-repeat;
+    background-size: cover;
+    img {
+        max-width: 100%;
+    }
+}
+
+.top{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #f7cebcd1;
+
+    &__left{
+        flex: 1 1 ;
+        display: flex;
+        align-items: center;
+        div{
+            margin: 10px;
+        }
+    }
+
+    &__rigth{
+    //    background-color: $brand-dark;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1 1 ;
+
+        div{
+            margin: 10px;
+        }
+    }
+}
+
+ul{
+    list-style: none;
+}

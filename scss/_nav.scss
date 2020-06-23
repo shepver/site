@@ -1,0 +1,8 @@
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__block{
+        flex: 1 1 300px;
+    }
+}
