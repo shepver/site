@@ -1,43 +1,151 @@
-header{
-    padding: 0.5em;
-   
-    background: url(/img/fon2.jpg) no-repeat;
-    background-size: cover;
+header {
+    // padding: 0.5em;
+    position: fixed;
+    width: 100%;
+    z-index: 110;
+    //  background: url(/img/fon2.jpg) no-repeat;
+
     img {
         max-width: 100%;
     }
 }
 
-.top{
-    
+.top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #f7cebcd1;
-
-    &__left{
-        flex: 1 1 ;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    &__left {
+        flex: 1 1;
         display: flex;
         align-items: center;
-        div{
+        div {
             margin: 10px;
         }
     }
 
-    &__rigth{
-    //    background-color: $brand-dark;
+    &__rigth {
+        //    background-color: $brand-dark;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        flex: 1 1 ;
+        flex: 1 1;
 
-        div{
+        div {
             margin: 10px;
         }
     }
 }
 
-ul{
+.phone {
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+.find {
+    position: relative;
+    input[type="text"] {
+        padding: 2px 10px;
+        border: 1px solid $brand-dark;
+        border-radius: 15px;
+    }
+
+    i {
+        position: absolute;
+        top: 4px;
+        right: 7px;
+    }
+}
+
+ul {
     list-style: none;
+}
+
+.burger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 20px;
+}
+
+.burger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 0;
+    top: 9px;
+    border: 1px solid #000000;
+    background-color: #000000;
+    box-sizing: border-box;
+    border-radius: 3px;
+    transition: all 0.3s ease 0s;
+}
+
+.burger:before,
+.burger:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 0;
+    border: 1px solid #000000;
+    background-color: #000000;
+    box-sizing: border-box;
+    border-radius: 3px;
+    transition: all 0.3s ease 0s;
+}
+
+.burger:before {
+    top: 0;
+}
+
+.burger:after {
+    bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .burger {
+        display: block;
+    }
+
+    .image-menu__image {
+        display: none;
+    }
+
+    .image-menu__item {
+        flex: 1 1 200px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burger.active span {
+        transform: scale(0);
+    }
+
+    .burger.active:before {
+        transform: rotate(45deg);
+        top: 10px;
+        background: #000000;
+    }
+
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 7px;
+        background: #000000;
+    }
+
+    .menu.active {
+        opacity: 1;
+        display: block;
+        position: absolute;
+        z-index: 100;
+
+        width: 100%;
+    }
 }

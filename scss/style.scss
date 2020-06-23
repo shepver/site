@@ -2,9 +2,13 @@
 @import "logo";
 @import "nav";
 @import "header";
-@import 'menu';
-@import 'menu_image';
+@import "menu";
+@import "menu_image";
+@import "banner";
+@import "footer";
 
-.wraper{
-   
+@media (max-width: 767px) {
+    main {
+        padding-top: 60px;
+    }
 }

@@ -1,0 +1,15 @@
+footer {
+    background: $brand-dark;
+
+    ul {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
